@@ -13,9 +13,19 @@ app:
     stackoverflow:
       base-url: https://api.stackexchange.com
 
+  rate-limit:
+    capacity: 10
+    refill-rate: 1
+    refill-time-seconds: 10
+
 spring:
   application:
     name: scrapper
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/scrapper
+    username: postgres
+    password: postgres
 
 server:
   port: 8080
